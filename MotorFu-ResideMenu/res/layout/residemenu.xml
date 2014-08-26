@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.motorfu.special.kenburnsview.KenBurnsView
+        android:id="@+id/kv_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!--
+         <ImageView
+        android:id="@+id/iv_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:visibility="gone" />
+    -->
+
+    <ImageView
+        android:id="@+id/iv_shadow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/shadow"
+        android:scaleType="fitXY"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/rl_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/height_8_80"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:id="@+id/rl_head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_centerHorizontal="true"
+            
+            android:paddingBottom="20dp" >
+
+            <ImageView
+                android:id="@+id/iv_head"
+                android:layout_width="@dimen/width_16_80"
+                android:layout_height="@dimen/width_16_80"
+                android:background="@drawable/ic_launcher" />
+
+            <TextView
+                android:id="@+id/tv_username"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/width_10_80"
+                android:layout_toRightOf="@id/iv_head"
+                android:gravity="center_vertical"
+                android:hint="用户名"
+                android:minWidth="@dimen/width_30_80"
+                android:layout_marginLeft="@dimen/width_2_80"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/text_size_13" />
+
+            <TextView
+                android:id="@+id/tv_other"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/width_6_80"
+                android:layout_below="@id/tv_username"
+                android:layout_toRightOf="@id/iv_head"
+                android:gravity="center_vertical"
+                android:minWidth="@dimen/width_36_80"
+                android:maxWidth="@dimen/width_36_80"
+                 android:layout_marginLeft="@dimen/width_2_80"
+                android:hint="other"
+                android:text="fdsahfkdsafkjdshakfjds"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/text_size_8" />
+        </RelativeLayout>
+        <View 
+            android:id="@+id/line"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/rl_head"
+            android:background="#ff40b5dd"/>
+
+        <com.motorfu.special.ResideMenu.MyScrollView
+            android:id="@+id/sv_left_menu"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/height_62_80"
+            android:layout_below="@id/line"
+            android:paddingBottom="@dimen/height_8_80"
+            android:paddingLeft="30dp"
+            android:visibility="visible" >
+
+            <TableLayout
+                android:id="@+id/layout_left_menu"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/height_62_80"
+                android:orientation="vertical" >
+            </TableLayout>
+        </com.motorfu.special.ResideMenu.MyScrollView>
+
+        <include
+            android:id="@+id/desktop_ugc_left"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            layout="@layout/ugc_menu_layout_left" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/height_10_80"
+        android:visibility="gone" >
+
+        <com.motorfu.special.ResideMenu.MyScrollView
+            android:id="@+id/sv_right_menu"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/height_62_80"
+            android:paddingBottom="@dimen/height_8_80"
+            android:paddingRight="30dp"
+            android:paddingTop="30dp"
+            android:scrollbars="none"
+            android:visibility="visible" >
+
+            <TableLayout
+                android:id="@+id/layout_right_menu"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/height_62_80"
+                android:paddingLeft="@dimen/width_24_80"
+                android:gravity="right"
+                android:orientation="vertical" >
+            </TableLayout>
+        </com.motorfu.special.ResideMenu.MyScrollView>
+
+        <include
+            android:id="@+id/desktop_ugc_right"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            layout="@layout/ugc_menu_layout_right" />
+    </RelativeLayout>
+
+</FrameLayout>

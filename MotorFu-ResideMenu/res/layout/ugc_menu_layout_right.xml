@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/ugc_layout_r"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <ImageView
+            android:id="@+id/ugc_voice_r"
+            android:layout_width="@dimen/width_10_80"
+            android:layout_height="@dimen/width_10_80"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="27dp"
+            android:layout_marginRight="64dp"
+            android:src="@drawable/ugc_icon_type_voice"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/ugc_photo_r"
+            android:layout_width="@dimen/width_10_80"
+            android:layout_height="@dimen/width_10_80"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="54dp"
+            android:layout_marginRight="116dp"
+            android:src="@drawable/ugc_icon_type_photo"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/ugc_record_r"
+            android:layout_width="@dimen/width_10_80"
+            android:layout_height="@dimen/width_10_80"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="85dp"
+            android:layout_marginRight="162dp"
+            android:src="@drawable/ugc_icon_type_record"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/ugc_lbs_r"
+            android:layout_width="@dimen/width_10_80"
+            android:layout_height="@dimen/width_10_80"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="121dp"
+            android:layout_marginRight="208dp"
+            android:src="@drawable/ugc_icon_type_lbs"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/ugc_bg_r"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:scaleType="matrix"
+        android:src="@drawable/ugc_opened_bg_right"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/ugc_r"
+        android:layout_width="@dimen/width_14_80"
+        android:layout_height="@dimen/width_14_80"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ugc_btn_quill_open" />
+
+</RelativeLayout>

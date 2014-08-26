@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="DaoCore" default="build-all">
+
+	<property name="version" value="1.1.2-MOTORFU" />
+	
+	<target name="build-all" depends="delete-release, build-jar, build-javadoc">
+	</target>
+
+	<target name="delete-release">
+		<delete dir="release" />
+	</target>
+
+	<target name="build-jar" description="Depends on Eclipse to have everthing compiled into bin/">
+		<mkdir dir="release" />
+		<jar jarfile="release/icon-${version}.jar">
+			<fileset dir="bin/classes">
+				<include name="**" />
+			</fileset>
+		</jar>
+	</target>
+
+	<target name="build-javadoc" description="Creates javadoc for classes">
+		<delete dir="release/docs/api" />
+		<mkdir dir="release/docs/api" />
+		<javadoc destdir="release/docs/api" author="false" version="false" use="true" windowtitle="ICON API" public="true"
+		      charset="UTF-8" encoding="UTF-8" docencoding="UTF-8">
+			<packageset dir="src" defaultexcludes="yes">
+				<include name="**" />
+			</packageset>
+			<packageset dir="src-icons" defaultexcludes="yes">
+				<include name="**" />
+			</packageset>
+			
+			<doctitle>
+				<![CDATA[<h1>ICON API</h1>]]>
+			
+			
+			</doctitle>
+		<bottom>
+			<![CDATA[<i>Copyright &#169; 2011-2013 ICON robot.de. All Rights Reserved.</i>]]></bottom>
+</javadoc>
+<jar jarfile="release/icon-${version}-javadoc.jar" basedir="release/docs/api" />
+</target>
+
+</project>

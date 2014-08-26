@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fontawesometext="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_bg"
+    android:layout_width="@dimen/width_50_80"
+    android:layout_height="@dimen/height_7_80"
+    
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:layout_gravity="center_vertical"
+    android:background="@color/white" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/height_6_80"
+        android:layout_gravity="center_vertical|left"
+        android:gravity="center_vertical|left"
+        android:orientation="horizontal" >
+
+        <com.motorfu.special.androidbootstrap.FontAwesomeText
+            android:id="@+id/tv_icon"
+            android:layout_width="@dimen/width_8_80"
+            android:layout_height="@dimen/width_8_80"
+            android:layout_gravity="right|center_vertical" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="30dp"
+            android:paddingLeft="10dp"
+            android:text="fdsafds"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_8" />
+    </LinearLayout>
+
+</TableRow>
